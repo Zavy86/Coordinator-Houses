@@ -35,11 +35,10 @@
    * {@inheritdoc}
    */
   public static function log_decode($event,$properties){
-   api_dump($event);
    // make return array
    $return_array=array();
    // users events
-   if($properties['class']=="cUser"){$return_array[]=api_text("cUser").": ".(new cUser($properties['id']))->fullname;}
+   if($properties['class']=="cUser"){$return_array[]=(new cUser($properties['id']))->fullname;}
    // rooms events
    if($properties['idRoom']){
     $return_array[]=api_text("cHousesHouseRoom").": ".(new cHousesHouseRoom($properties['idRoom']))->name;
