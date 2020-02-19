@@ -28,15 +28,20 @@
  <text key="cHousesHouse-alert-deleted">L'immobile è stato eliminato</text>
  <text key="cHousesHouse-alert-undeleted">L'immobile è stato ripristinato</text>
  <text key="cHousesHouse-alert-removed">L'immobile è stato rimosso</text>
+       <text key="cHousesHouse-alert-user_added">L'utente è stato aggiunto all'immobile</text>
+       <text key="cHousesHouse-alert-user_removed">L'utente è stato rimosso dall'immobile</text>
  <text key="cHousesHouse-confirm-delete">Confermi di voler eliminare questo immobile?</text>
  <text key="cHousesHouse-confirm-undelete">Confermi di voler ripristinare questo immobile?</text>
  <text key="cHousesHouse-confirm-remove">Confermi di voler rimuovere irrecuperabilmente questo immobile dal database?</text>
+ <text key="cHousesHouse-confirm-user_remove">Confermi di voler rimuovere questo utente dall'immobile?</text>
  <text key="cHousesHouse-warning-deleted">Attenzione, questo immobile risulta eliminato!</text>
  <text key="cHousesHouse-event-created">Creazione</text>
  <text key="cHousesHouse-event-updated">Aggiornamento</text>
  <text key="cHousesHouse-event-deleted">Eliminazione</text>
  <text key="cHousesHouse-event-undeleted">Ripristino</text>
  <text key="cHousesHouse-event-removed">Rimozione</text>
+       <text key="cHousesHouse-event-user_added">Utente aggiunto</text>
+       <text key="cHousesHouse-event-user_removed">Utente rimosso</text>
  <text key="cHousesHouse-property-name">Immobile</text>
  <text key="cHousesHouse-property-description">Descrizione</text>
  <text key="cHousesHouse-property-street">Indirizzo</text>
@@ -89,12 +94,16 @@
  <text key="houses_view">Immobile: <![CDATA[{0}]]></text>
  <text key="houses_view-tab-informations">Informazioni</text>
  <text key="houses_view-tab-rooms">Stanze</text>
+ <text key="houses_view-tab-users">Utenti</text>
  <text key="houses_view-tab-logs">Eventi</text>
  <text key="houses_view-informations-dt-address">Indirizzo</text>
  <text key="houses_view-rooms-tr-unvalued">Non sono presenti stanze da mostrare..</text>
  <text key="houses_view-rooms-modal-title-view">Stanza dell'immobile <![CDATA[{0}]]></text>
  <text key="houses_view-rooms-modal-title-add">Aggiungi stanza all'immobile <![CDATA[{0}]]></text>
  <text key="houses_view-rooms-modal-title-edit">Modifica stanza dell'immobile <![CDATA[{0}]]></text>
+ <text key="houses_view-users-tr-unvalued">Non sono presenti utenti da mostrare..</text>
+ <text key="houses_view-users-modal-title-view">Utente dell'immobile <![CDATA[{0}]]></text>
+ <text key="houses_view-users-modal-title-add">Aggiungi utente all'immobile <![CDATA[{0}]]></text>
 
  <!-- houses_edit -->
  <text key="houses_edit">Modifica immobile: <![CDATA[{0}]]></text>
