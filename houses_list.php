@@ -6,7 +6,7 @@
  * @author  Manuel Zavatta <manuel.zavatta@gmail.com>
  * @link    http://www.coordinator.it
  */
- api_checkAuthorization("houses-manage","dashboard");
+ api_checkAuthorization("houses-houses_view","dashboard");
  // include module template
  require_once(MODULE_PATH."template.inc.php");
  // definitions
@@ -35,9 +35,9 @@
  foreach($houses_array as $house_fobj){
   // build operation button
   $ob=new strOperationsButton();
-  $ob->addElement(api_url(["scr"=>"houses_edit","idHouse"=>$house_fobj->id,"return"=>["scr"=>"houses_list"]]),"fa-pencil",api_text("table-td-edit"),(api_checkAuthorization("houses-manage")));
-  if($house_fobj->deleted){$ob->addElement(api_url(["scr"=>"submit","act"=>"house_undelete","idHouse"=>$house_fobj->id,"return"=>["scr"=>"houses_list"]]),"fa-trash-o",api_text("table-td-undelete"),(api_checkAuthorization("houses-manage")),api_text("houses_list-td-undelete-confirm"));}
-  else{$ob->addElement(api_url(["scr"=>"submit","act"=>"house_delete","idHouse"=>$house_fobj->id,"return"=>["scr"=>"houses_list"]]),"fa-trash",api_text("table-td-delete"),(api_checkAuthorization("houses-manage")),api_text("houses_list-td-delete-confirm"));}
+  $ob->addElement(api_url(["scr"=>"houses_edit","idHouse"=>$house_fobj->id,"return"=>["scr"=>"houses_list"]]),"fa-pencil",api_text("table-td-edit"),(api_checkAuthorization("houses-houses_manage")));
+  if($house_fobj->deleted){$ob->addElement(api_url(["scr"=>"controller","act"=>"undelete","obj"=>"cHousesHouse","idHouse"=>$house_fobj->id,"return"=>["scr"=>"houses_list"]]),"fa-trash-o",api_text("table-td-undelete"),(api_checkAuthorization("houses-houses_manage")),api_text("cHousesHouse-confirm-undelete"));}
+  else{$ob->addElement(api_url(["scr"=>"controller","act"=>"delete","obj"=>"cHousesHouse","idHouse"=>$house_fobj->id,"return"=>["scr"=>"houses_list"]]),"fa-trash",api_text("table-td-delete"),(api_checkAuthorization("houses-houses_manage")),api_text("cHousesHouse-confirm-delete"));}
   // make table row class
   $tr_class_array=array();
   if($house_fobj->id==$_REQUEST['idHouse']){$tr_class_array[]="currentrow";}
@@ -45,7 +45,7 @@
   // make house row
   $table->addRow(implode(" ",$tr_class_array));
   $table->addRowFieldAction(api_url(["scr"=>"houses_view","idHouse"=>$house_fobj->id]),"fa-search",api_text("table-td-view"));
-  $table->addRowField($house_fobj->getLabel(),"nowrap");
+  $table->addRowField($house_fobj->name,"nowrap");
   $table->addRowField($house_fobj->getAddress(),"truncate-ellipsis");
   $table->addRowField($ob->render(),"text-right");
  }
