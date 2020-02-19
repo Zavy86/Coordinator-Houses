@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-->
+ ! Houses - Default localization
+ !
+ ! @package Coordinator\Modules\Houses
+ ! @author  Manuel Zavatta <manuel.zavatta@gmail.com>
+ ! @link    http://www.coordinator.it
+<!-->
+<locale>
+
+ <!-- module -->
+ <text key="houses">Immobili</text>
+ <text key="houses-description">Gestione Immobili</text>
+
+ <!-- authorizations -->
+ <text key="houses-manage">Gestione</text>
+ <text key="houses-manage-description">Gestione Modulo Immobili</text>
+ <text key="houses-houses_view">Immobili (visualizzazione)</text>
+ <text key="houses-houses_view-description">Visualizzazione degli immobili</text>
+ <text key="houses-houses_manage">Immobili (gestione)</text>
+ <text key="houses-houses_manage-description">Gestione degli immobili</text>
+
+</locale>
