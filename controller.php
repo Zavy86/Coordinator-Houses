@@ -31,6 +31,14 @@
   api_dump($house_obj,"house object");
   // check object
   if($action!="store" && !$house_obj->id){api_alerts_add(api_text("cHousesHouse-alert-exists"),"danger");api_redirect("?mod=".MODULE."&scr=houses_list");}
+  // check for user
+  if(in_array($action,array("user_add","user_remove"))){
+   // get object
+   $user_obj=new cUser($_REQUEST['idUser']);
+   api_dump($user_obj,"user object");
+   // check object
+   if(!$user_obj->id){api_alerts_add(api_text("cHousesHouse-alert-exists"),"danger");api_redirect("?mod=".MODULE."&scr=houses_view&tab=users&idHouse=".$house_obj->id);}
+  }
   // execution
   try{
    // switch action
@@ -50,6 +58,14 @@
     case "remove":
      $house_obj->remove();
      api_alerts_add(api_text("cHousesHouse-alert-removed"),"warning");
+     break;
+    case "user_add":
+     $house_obj->user_add($user_obj);
+     api_alerts_add(api_text("cHousesHouse-alert-user_added"),"success");
+     break;
+    case "user_remove":
+     $house_obj->user_remove($user_obj);
+     api_alerts_add(api_text("cHousesHouse-alert-user_removed"),"warning");
      break;
     default:
      throw new Exception("Action \"".$action."\" was not defined..");
