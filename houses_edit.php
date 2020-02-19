@@ -19,10 +19,10 @@
  if($house_obj->id){
   $form->addControl("button",api_text("form-fc-cancel"),api_return_url(["scr"=>"houses_view","idHouse"=>$house_obj->id]));
   if(!$house_obj->deleted){
-   $form->addControl("button",api_text("form-fc-delete"),api_url(["scr"=>"submit","act"=>"house_delete","idHouse"=>$house_obj->id]),"btn-danger",api_text("cHousesHouse-confirm-delete"));
+   $form->addControl("button",api_text("form-fc-delete"),api_url(["scr"=>"controller","act"=>"delete","obj"=>"cHousesHouse","idHouse"=>$house_obj->id]),"btn-danger",api_text("cHousesHouse-confirm-delete"));
   }else{
-   $form->addControl("button",api_text("form-fc-undelete"),api_url(["scr"=>"submit","act"=>"house_undelete","idHouse"=>$house_obj->id,"return"=>["scr"=>"houses_view"]]),"btn-warning");
-   $form->addControl("button",api_text("form-fc-remove"),api_url(["scr"=>"submit","act"=>"house_remove","idHouse"=>$house_obj->id]),"btn-danger",api_text("cHousesHouse-confirm-remove"));
+   $form->addControl("button",api_text("form-fc-undelete"),api_url(["scr"=>"controller","act"=>"undelete","obj"=>"cHousesHouse","idHouse"=>$house_obj->id,"return"=>["scr"=>"houses_view"]]),"btn-warning");
+   $form->addControl("button",api_text("form-fc-remove"),api_url(["scr"=>"controller","act"=>"remove","obj"=>"cHousesHouse","idHouse"=>$house_obj->id]),"btn-danger",api_text("cHousesHouse-confirm-remove"));
   }
  }else{$form->addControl("button",api_text("form-fc-cancel"),api_url(["scr"=>"houses_list"]));}
  // build grid object
