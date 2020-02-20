@@ -33,7 +33,7 @@
  $tab->addItem(api_icon("fa-clone")." ".api_text("houses_view-tab-rooms"),$rooms_table->render(),("rooms"==TAB?"active":null));
  //$tab->addItem(api_icon("fa-user-o")." ".api_text("houses_view-tab-counters"),$counters_table->render(),("counters"==TAB?"active":null));
  $tab->addItem(api_icon("fa-user-o")." ".api_text("houses_view-tab-users"),$users_table->render(),("users"==TAB?"active":null));
- $tab->addItem(api_icon("fa-file-text-o")." ".api_text("houses_view-tab-logs"),api_logs_table($house_obj->getLogs())->render(),("logs"==TAB?"active":null));
+ $tab->addItem(api_icon("fa-file-text-o")." ".api_text("houses_view-tab-logs"),api_logs_table($house_obj->getLogs((!$_REQUEST['all_logs']?10:null)))->render(),("logs"==TAB?"active":null));
  // build grid object
  $grid=new strGrid();
  $grid->addRow();

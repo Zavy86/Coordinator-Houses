@@ -117,7 +117,7 @@
    api_redirect(api_return_url(["scr"=>"rooms_list","idRoom"=>$room_obj->id]));
   }catch(Exception $e){
    // dump, alert and redirect
-   api_redirect_exception($e,api_url(["scr"=>"rooms_list","idRoom"=>$room_obj->id]),"cHousesHouseRoom-alert-error");
+   api_redirect_exception($e,api_url(["scr"=>"houses_list","idRoom"=>$room_obj->id]),"cHousesHouseRoom-alert-error");
   }
  }
 
