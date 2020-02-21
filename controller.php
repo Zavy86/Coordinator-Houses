@@ -121,4 +121,47 @@
   }
  }
 
+ /**
+  * House Counter controller
+  *
+  * @param string $action Object action
+  */
+ function cHousesHouseCounter_controller($action){
+  // check authorizations
+  api_checkAuthorization("houses-houses_manage","dashboard");
+  // get object
+  $counter_obj=new cHousesHouseCounter($_REQUEST['idCounter']);
+  api_dump($counter_obj,"counter object");
+  // check object
+  if($action!="store" && !$counter_obj->id){api_alerts_add(api_text("cHousesHouseCounter-alert-exists"),"danger");api_redirect("?mod=".MODULE."&scr=houses_list");}
+  // execution
+  try{
+   switch($action){
+    case "store":
+     $counter_obj->store($_REQUEST);
+     api_alerts_add(api_text("cHousesHouseCounter-alert-stored"),"success");
+     break;
+    case "delete":
+     $counter_obj->delete();
+     api_alerts_add(api_text("cHousesHouseCounter-alert-deleted"),"warning");
+     break;
+    case "undelete":
+     $counter_obj->undelete();
+     api_alerts_add(api_text("cHousesHouseCounter-alert-undeleted"),"warning");
+     break;
+    case "remove":
+     $counter_obj->remove();
+     api_alerts_add(api_text("cHousesHouseCounter-alert-removed"),"warning");
+     break;
+    default:
+     throw new Exception("Counter action \"".$action."\" was not defined..");
+   }
+   // redirect
+   api_redirect(api_return_url(["scr"=>"counters_list","idCounter"=>$counter_obj->id]));
+  }catch(Exception $e){
+   // dump, alert and redirect
+   api_redirect_exception($e,api_url(["scr"=>"houses_list","idCounter"=>$counter_obj->id]),"cHousesHouseCounter-alert-error");
+  }
+ }
+
 ?>

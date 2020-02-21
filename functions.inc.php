@@ -10,5 +10,6 @@
  // include classes
  require_once(DIR."modules/houses/classes/cHousesHouse.class.php");
  require_once(DIR."modules/houses/classes/cHousesHouseRoom.class.php");
+ require_once(DIR."modules/houses/classes/cHousesHouseCounter.class.php");
 
 ?>
