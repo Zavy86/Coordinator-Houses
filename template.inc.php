@@ -22,6 +22,7 @@
    $nav->addSubItem(api_text("nav-houses-operations-edit"),api_url(["scr"=>"houses_edit","idHouse"=>$house_obj->id]),(api_checkAuthorization("houses-houses_manage")));
    $nav->addSubSeparator();
    $nav->addSubItem(api_text("nav-houses-operations-room_add"),api_url(["scr"=>"houses_view","tab"=>"rooms","act"=>"room_add","idHouse"=>$house_obj->id]),(api_checkAuthorization("houses-houses_manage")));
+   $nav->addSubItem(api_text("nav-houses-operations-counter_add"),api_url(["scr"=>"houses_view","tab"=>"counters","act"=>"counter_add","idHouse"=>$house_obj->id]),(api_checkAuthorization("houses-houses_manage")));
    $nav->addSubItem(api_text("nav-houses-operations-user_add"),api_url(["scr"=>"houses_view","tab"=>"users","act"=>"user_add","idHouse"=>$house_obj->id]),(api_checkAuthorization("houses-houses_manage")));
   }else{
    $nav->addItem(api_text("nav-houses-add"),api_url(["scr"=>"houses_edit"]),(api_checkAuthorization("houses-houses_manage")));
