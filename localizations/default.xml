@@ -14,11 +14,13 @@
 
  <!-- authorizations -->
  <text key="houses-manage">Gestione</text>
- <text key="houses-manage-description">Gestione Modulo Immobili</text>
- <text key="houses-houses_view">Immobili (visualizzazione)</text>
- <text key="houses-houses_view-description">Visualizzazione degli immobili</text>
- <text key="houses-houses_manage">Immobili (gestione)</text>
- <text key="houses-houses_manage-description">Gestione degli immobili</text>
+ <text key="houses-manage-description">Gestione modulo immobili</text>
+            <text key="houses-usage">Abilitazione</text>
+            <text key="houses-usage-description">Utilizzo del modulo immobili</text>
+       <text key="houses-houses_view">Immobili (visualizzazione)</text>
+       <text key="houses-houses_view-description">Visualizzazione degli immobili</text>
+       <text key="houses-houses_manage">Immobili (gestione)</text>
+       <text key="houses-houses_manage-description">Gestione degli immobili</text>
 
  <!-- cHousesHouse -->
  <text key="cHousesHouse">Immobile</text>
@@ -78,11 +80,30 @@
  <text key="cHousesHouseRoom-placeholder-name">Nome della stanza</text>
  <text key="cHousesHouseRoom-placeholder-description">Eventuale descrizione della stanza</text>
 
+ <!-- cHousesHouseCounter -->
+ <text key="cHousesHouseCounter">Contatore</text>
+ <text key="cHousesHouseCounter-alert-error">Si è verificato un errore durante il salvataggio del contatore dell'immobile</text>
+ <text key="cHousesHouseCounter-alert-exists">Il contatore dell'immobile non è stato trovato</text>
+ <text key="cHousesHouseCounter-alert-stored">Il contatore dell'immobile è stato salvato</text>
+ <text key="cHousesHouseCounter-alert-deleted">Il contatore dell'immobile è stato eliminato</text>
+ <text key="cHousesHouseCounter-alert-undeleted">Il contatore dell'immobile è stato ripristinato</text>
+ <text key="cHousesHouseCounter-alert-removed">Il contatore dell'immobile è stato rimosso</text>
+ <text key="cHousesHouseCounter-confirm-delete">Confermi di voler eliminare questo contatore dell'immobile?</text>
+ <text key="cHousesHouseCounter-confirm-undelete">Confermi di voler ripristinare questo contatore dell'immobile?</text>
+ <text key="cHousesHouseCounter-confirm-remove">Confermi di voler rimuovere irrecuperabilmente questo contatore dell'immobile dal database?</text>
+ <text key="cHousesHouseCounter-property-fkHouse">Immobile</text>
+ <text key="cHousesHouseCounter-property-fkCounter">Contatore</text>
+ <text key="cHousesHouseCounter-property-competence">Competenza</text>
+ <text key="cHousesHouseCounter-placeholder-fkCounter">Seleziona un contatore..</text>
+ <text key="cHousesHouseCounter-placeholder-competence">Percentuale di competenza sul contatore dell'immobile</text>
+
  <!-- navigation -->
  <text key="nav-houses-list">Immobili</text>
  <text key="nav-houses-add">Aggiungi immobile</text>
  <text key="nav-houses-operations-edit">Modifica immobile</text>
  <text key="nav-houses-operations-room_add">Aggiungi stanza</text>
+ <text key="nav-houses-operations-counter_add">Aggiungi contatore</text>
+ <text key="nav-houses-operations-user_add">Aggiungi utente</text>
 
  <!-- houses_list -->
  <text key="houses_list">Immobili</text>
@@ -94,6 +115,7 @@
  <text key="houses_view">Immobile: <![CDATA[{0}]]></text>
  <text key="houses_view-tab-informations">Informazioni</text>
  <text key="houses_view-tab-rooms">Stanze</text>
+ <text key="houses_view-tab-counters">Contatori</text>
  <text key="houses_view-tab-users">Utenti</text>
  <text key="houses_view-tab-logs">Eventi</text>
  <text key="houses_view-informations-dt-address">Indirizzo</text>
@@ -101,7 +123,23 @@
  <text key="houses_view-rooms-modal-title-view">Stanza dell'immobile <![CDATA[{0}]]></text>
  <text key="houses_view-rooms-modal-title-add">Aggiungi stanza all'immobile <![CDATA[{0}]]></text>
  <text key="houses_view-rooms-modal-title-edit">Modifica stanza dell'immobile <![CDATA[{0}]]></text>
+ <text key="houses_view-counters-tr-unvalued">Non sono presenti contatori da mostrare..</text>
+ <text key="houses_view-counters-th-last_period">Ultima misurazione</text>
+ <text key="houses_view-counters-th-last_current">Attuale</text>
+ <text key="houses_view-counters-th-last_previous">Precedente</text>
+ <text key="houses_view-counters-th-last_value">Valore</text>
+ <text key="houses_view-counters-th-last_competence">Valore di competenza</text>
+ <text key="houses_view-counters-measurements-tr-unvalued">Non sono presenti misurazioni da mostrare..</text>
+ <text key="houses_view-counters-measurements-th-period">Periodo</text>
+ <text key="houses_view-counters-measurements-th-current">Attuale</text>
+ <text key="houses_view-counters-measurements-th-previous">Precedente</text>
+ <text key="houses_view-counters-measurements-th-value">Valore</text>
+ <text key="houses_view-counters-measurements-th-competence">Competenza</text>
+ <text key="houses_view-counters-modal-title-view">Contatore dell'immobile <![CDATA[{0}]]></text>
+ <text key="houses_view-counters-modal-title-add">Aggiungi contatore all'immobile <![CDATA[{0}]]></text>
+ <text key="houses_view-counters-modal-title-edit">Modifica contatore dell'immobile <![CDATA[{0}]]></text>
  <text key="houses_view-users-tr-unvalued">Non sono presenti utenti da mostrare..</text>
+ <text key="houses_view-users-th-user">Utente</text>
  <text key="houses_view-users-modal-title-view">Utente dell'immobile <![CDATA[{0}]]></text>
  <text key="houses_view-users-modal-title-add">Aggiungi utente all'immobile <![CDATA[{0}]]></text>
 
