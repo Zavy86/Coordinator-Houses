@@ -37,13 +37,19 @@
   public static function log_decode($event,$properties){
    // make return array
    $return_array=array();
+   // rooms events
+   if($properties['_obj']=="cHousesHouseRoom"){$return_array[]=api_text($properties['_obj'])." ".$properties['_name'];}
+   // counters events
+   if($properties['_obj']=="cHousesHouseCounter"){
+    $return_array[]=api_text($properties['_obj'])." ".$properties['_name'];
+    if($properties['competence']){$return_array[]=api_text("cHousesHouseCounter-property-competence").": ".$properties['competence']['previous']."% &rarr; ".$properties['competence']['current']."%";}
+   }
+
    // users events
    if($properties['class']=="cUser"){$return_array[]=(new cUser($properties['id']))->fullname;}
-   // rooms events
-   if($properties['idRoom']){
-    $return_array[]=api_text("cHousesHouseRoom").": ".(new cHousesHouseRoom($properties['idRoom']))->name;
-    if($properties['name']){$return_array[]=api_text("cHousesHouseRoom-property-name").": ".$properties['name']['previous']." &rarr; ".$properties['name']['current'];}
-   }
+
+   /** @todo valutare se usare sempre class o _obj e correggere di conseguenza */
+
    // return
    return implode(" | ",$return_array);
   }
@@ -99,6 +105,13 @@
    * @return objects[] Rooms array
    */
   public function getRooms(){return cHousesHouseRoom::availables("`fkHouse`='".$this->id."'");}
+
+  /**
+   * Get Counters
+   *
+   * @return cHousesHouseCounter[] Counters array
+   */
+  public function getCounters(){return cHousesHouseCounter::availables("`fkHouse`='".$this->id."'");}
 
   /**
    * Check
