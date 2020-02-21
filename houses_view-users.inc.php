@@ -6,7 +6,7 @@
  * @author  Manuel Zavatta <manuel.zavatta@gmail.com>
  * @link    http://www.coordinator.it
  */
- // build table
+ // build users table
  $users_table=new strTable(api_text("houses_view-users-tr-unvalued"));
  $users_table->addHeader(api_text("houses_view-users-th-user"),null,"100%");
  $users_table->addHeader("&nbsp;",null,16);
@@ -31,6 +31,7 @@
   // build user description list
   $selected_user_dl=new strDescriptionList("br","dl-horizontal");
   $selected_user_dl->addElement(api_text("houses_view-users-modal-dt-fullname"),api_tag("strong",$selected_user_obj->fullname));
+  /** @todo integrare con modal users appena disponibile */
   // build user view modal window
   $user_modal=new strModal(api_text("houses_view-users-modal-title-view",$house_obj->name),null,"houses_view-user");
   $user_modal->setBody($selected_user_dl->render());
