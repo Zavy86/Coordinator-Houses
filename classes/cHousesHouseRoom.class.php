@@ -3,8 +3,8 @@
  * Houses - House Room
  *
  * @package Coordinator\Modules\Houses
- * @company Cogne Acciai Speciali s.p.a
- * @authors Manuel Zavatta <manuel.zavatta@cogne.com>
+ * @author  Manuel Zavatta <manuel.zavatta@gmail.com>
+ * @link    http://www.coordinator.it
  */
 
  /**
@@ -64,13 +64,16 @@
    return $form;
   }
 
+  // Disable remove function
+  public function remove(){throw new Exception("Room remove function disabled by developer..");}
+
   // debug
   protected function event_triggered($event){
    //api_dump($event,static::class." event triggered");
    // skip trace events
    if($event->typology=="trace"){return;}
    // log event to house
-   $this->getHouse()->event_log($event->typology,$event->action,array_merge(["idRoom"=>$this->id],$event->properties));
+   $this->getHouse()->event_log($event->typology,$event->action,array_merge(["_obj"=>"cHousesHouseRoom","_id"=>$this->id,"_name"=>$this->name],$event->properties));
   }
 
  }
