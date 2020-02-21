@@ -65,7 +65,7 @@
   }
 
   // Disable remove function
-  public function remove(){throw new Exception("Room remove function disabled by developer..");}
+  //public function remove(){throw new Exception("Room remove function disabled by developer..");}
 
   // debug
   protected function event_triggered($event){
