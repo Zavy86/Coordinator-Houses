@@ -6,7 +6,7 @@
  * @author  Manuel Zavatta <manuel.zavatta@gmail.com>
  * @link    http://www.coordinator.it
  */
- api_checkAuthorization("houses-houses_view","dashboard");
+ api_checkAuthorization("houses-usage","dashboard");
  // get objects
  $house_obj=new cHousesHouse($_REQUEST['idHouse']);
  // check objects

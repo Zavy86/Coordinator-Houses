@@ -15,7 +15,7 @@
   // build operation button
   $ob=new strOperationsButton();
   $ob->addElement(api_url(["scr"=>"houses_view","tab"=>"users","act"=>"user_view","idHouse"=>$house_obj->id,"idUser"=>$user_fobj->id]),"fa-info-circle",api_text("table-td-view"));
-  $ob->addElement(api_url(["scr"=>"controller","act"=>"user_remove","obj"=>"cHousesHouse","idHouse"=>$house_obj->id,"idUser"=>$user_fobj->id,"return"=>["scr"=>"houses_view","tab"=>"users"]]),"fa-trash",api_text("table-td-remove"),(api_checkAuthorization("houses-houses_manage")),api_text("cHousesHouse-confirm-user_remove"));
+  $ob->addElement(api_url(["scr"=>"controller","act"=>"user_remove","obj"=>"cHousesHouse","idHouse"=>$house_obj->id,"idUser"=>$user_fobj->id,"return"=>["scr"=>"houses_view","tab"=>"users"]]),"fa-trash",api_text("table-td-remove"),(api_checkAuthorization("houses-manage")),api_text("cHousesHouse-confirm-user_remove"));
   // make table row class
   $tr_class_array=array();
   if($user_fobj->id==$_REQUEST['idUser']){$tr_class_array[]="currentrow";}

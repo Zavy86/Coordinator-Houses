@@ -15,12 +15,8 @@
  <!-- authorizations -->
  <text key="houses-manage">Gestione</text>
  <text key="houses-manage-description">Gestione modulo immobili</text>
-            <text key="houses-usage">Abilitazione</text>
-            <text key="houses-usage-description">Utilizzo del modulo immobili</text>
-       <text key="houses-houses_view">Immobili (visualizzazione)</text>
-       <text key="houses-houses_view-description">Visualizzazione degli immobili</text>
-       <text key="houses-houses_manage">Immobili (gestione)</text>
-       <text key="houses-houses_manage-description">Gestione degli immobili</text>
+ <text key="houses-usage">Abilitazione</text>
+ <text key="houses-usage-description">Utilizzo del modulo immobili</text>
 
  <!-- cHousesHouse -->
  <text key="cHousesHouse">Immobile</text>

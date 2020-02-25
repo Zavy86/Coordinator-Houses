@@ -25,7 +25,7 @@
   */
  function cHousesHouse_controller($action){
   // check authorizations
-  api_checkAuthorization("houses-houses_manage","dashboard");
+  api_checkAuthorization("houses-manage","dashboard");
   // get object
   $house_obj=new cHousesHouse($_REQUEST['idHouse']);
   api_dump($house_obj,"house object");
@@ -85,7 +85,7 @@
   */
  function cHousesHouseRoom_controller($action){
   // check authorizations
-  api_checkAuthorization("houses-houses_manage","dashboard");
+  api_checkAuthorization("houses-manage","dashboard");
   // get object
   $room_obj=new cHousesHouseRoom($_REQUEST['idRoom']);
   api_dump($room_obj,"room object");
@@ -128,7 +128,7 @@
   */
  function cHousesHouseCounter_controller($action){
   // check authorizations
-  api_checkAuthorization("houses-houses_manage","dashboard");
+  api_checkAuthorization("houses-manage","dashboard");
   // get object
   $counter_obj=new cHousesHouseCounter($_REQUEST['idCounter']);
   api_dump($counter_obj,"counter object");

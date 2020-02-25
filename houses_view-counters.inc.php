@@ -21,8 +21,8 @@
   // build operation button
   $ob=new strOperationsButton();
   $ob->addElement(api_url(["scr"=>"houses_view","tab"=>"counters","act"=>"counter_view","idHouse"=>$house_obj->id,"idCounter"=>$counter_fobj->id]),"fa-info-circle",api_text("table-td-view"));
-  $ob->addElement(api_url(["scr"=>"houses_view","tab"=>"counters","act"=>"counter_edit","idHouse"=>$house_obj->id,"idCounter"=>$counter_fobj->id]),"fa-pencil",api_text("table-td-edit"),(api_checkAuthorization("houses-houses_manage")));
-  $ob->addElement(api_url(["scr"=>"controller","act"=>"remove","obj"=>"cHousesHouseCounter","idHouse"=>$house_obj->id,"idCounter"=>$counter_fobj->id,"return"=>["scr"=>"houses_view","tab"=>"counters","idHouse"=>$house_obj->id]]),"fa-trash",api_text("table-td-remove"),(api_checkAuthorization("houses-houses_manage")),api_text("cHousesHouseCounter-confirm-remove"));
+  $ob->addElement(api_url(["scr"=>"houses_view","tab"=>"counters","act"=>"counter_edit","idHouse"=>$house_obj->id,"idCounter"=>$counter_fobj->id]),"fa-pencil",api_text("table-td-edit"),(api_checkAuthorization("houses-manage")));
+  $ob->addElement(api_url(["scr"=>"controller","act"=>"remove","obj"=>"cHousesHouseCounter","idHouse"=>$house_obj->id,"idCounter"=>$counter_fobj->id,"return"=>["scr"=>"houses_view","tab"=>"counters","idHouse"=>$house_obj->id]]),"fa-trash",api_text("table-td-remove"),(api_checkAuthorization("houses-manage")),api_text("cHousesHouseCounter-confirm-remove"));
   // make table row class
   $tr_class_array=array();
   if($counter_fobj->id==$_REQUEST['idCounter']){$tr_class_array[]="currentrow";}
@@ -72,7 +72,7 @@
   $app->addScript("$(function(){\$('#modal_houses_view-counter').modal({show:true});});");
  }
  // check for add or edit action
- if(in_array(ACTION,["counter_add","counter_edit"]) && api_checkAuthorization("houses-houses_manage")){
+ if(in_array(ACTION,["counter_add","counter_edit"]) && api_checkAuthorization("houses-manage")){
   // get selected counter
   $selected_counter_obj=new cHousesHouseCounter($_REQUEST['idCounter']);
   // get form

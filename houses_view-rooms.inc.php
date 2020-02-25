@@ -16,10 +16,10 @@
   // build operation button
   $ob=new strOperationsButton();
   $ob->addElement(api_url(["scr"=>"houses_view","tab"=>"rooms","act"=>"room_view","idHouse"=>$house_obj->id,"idRoom"=>$room_fobj->id]),"fa-info-circle",api_text("table-td-view"));
-  $ob->addElement(api_url(["scr"=>"houses_view","tab"=>"rooms","act"=>"room_edit","idHouse"=>$house_obj->id,"idRoom"=>$room_fobj->id]),"fa-pencil",api_text("table-td-edit"),(api_checkAuthorization("houses-houses_manage")));
-  //$ob->addElement(api_url(["scr"=>"controller","act"=>"remove","obj"=>"cHousesHouseRoom","idHouse"=>$house_obj->id,"idRoom"=>$selected_room_obj->id,"return"=>["scr"=>"houses_view","idHouse"=>$house_obj->id]]),"fa-trash",api_text("table-td-remove"),(api_checkAuthorization("houses-houses_manage")),api_text("cHousesHouseRoom-confirm-remove"));
-  if($room_fobj->deleted){$ob->addElement(api_url(["scr"=>"controller","act"=>"undelete","obj"=>"cHousesHouseRoom","idHouse"=>$house_obj->id,"idRoom"=>$room_fobj->id,"return"=>["scr"=>"houses_view","tab"=>"rooms","idHouse"=>$house_obj->id]]),"fa-trash-o",api_text("table-td-undelete"),(api_checkAuthorization("houses-houses_manage")),api_text("cHousesHouseRoom-confirm-undelete"));}
-  else{$ob->addElement(api_url(["scr"=>"controller","act"=>"delete","obj"=>"cHousesHouseRoom","idHouse"=>$house_obj->id,"idRoom"=>$room_fobj->id,"return"=>["scr"=>"houses_view","tab"=>"rooms","idHouse"=>$house_obj->id]]),"fa-trash",api_text("table-td-delete"),(api_checkAuthorization("houses-houses_manage")),api_text("cHousesHouseRoom-confirm-delete"));}
+  $ob->addElement(api_url(["scr"=>"houses_view","tab"=>"rooms","act"=>"room_edit","idHouse"=>$house_obj->id,"idRoom"=>$room_fobj->id]),"fa-pencil",api_text("table-td-edit"),(api_checkAuthorization("houses-manage")));
+  //$ob->addElement(api_url(["scr"=>"controller","act"=>"remove","obj"=>"cHousesHouseRoom","idHouse"=>$house_obj->id,"idRoom"=>$room_fobj->id,"return"=>["scr"=>"houses_view","idHouse"=>$house_obj->id]]),"fa-trash",api_text("table-td-remove"),(api_checkAuthorization("houses-manage")),api_text("cHousesHouseRoom-confirm-remove"));
+  if($room_fobj->deleted){$ob->addElement(api_url(["scr"=>"controller","act"=>"undelete","obj"=>"cHousesHouseRoom","idHouse"=>$house_obj->id,"idRoom"=>$room_fobj->id,"return"=>["scr"=>"houses_view","tab"=>"rooms","idHouse"=>$house_obj->id]]),"fa-trash-o",api_text("table-td-undelete"),(api_checkAuthorization("houses-manage")),api_text("cHousesHouseRoom-confirm-undelete"));}
+  else{$ob->addElement(api_url(["scr"=>"controller","act"=>"delete","obj"=>"cHousesHouseRoom","idHouse"=>$house_obj->id,"idRoom"=>$room_fobj->id,"return"=>["scr"=>"houses_view","tab"=>"rooms","idHouse"=>$house_obj->id]]),"fa-trash",api_text("table-td-delete"),(api_checkAuthorization("houses-manage")),api_text("cHousesHouseRoom-confirm-delete"));}
   // make table row class
   $tr_class_array=array();
   if($room_fobj->id==$_REQUEST['idRoom']){$tr_class_array[]="currentrow";}
@@ -47,7 +47,7 @@
   $app->addScript("$(function(){\$('#modal_houses_view-room').modal({show:true});});");
  }
  // check for add or edit action
- if(in_array(ACTION,["room_add","room_edit"]) && api_checkAuthorization("houses-houses_manage")){
+ if(in_array(ACTION,["room_add","room_edit"]) && api_checkAuthorization("houses-manage")){
   // get selected room
   $selected_room_obj=new cHousesHouseRoom($_REQUEST['idRoom']);
   // get form
