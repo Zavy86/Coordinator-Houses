@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-->
+ ! Houses - Default localization
+ !
+ ! @package Coordinator\Modules\Houses
+ ! @author  Manuel Zavatta <manuel.zavatta@gmail.com>
+ ! @link    http://www.coordinator.it
+<!-->
+<locale>
+
+ <!-- module -->
+ <text key="houses">Immobili</text>
+ <text key="houses-description">Gestione Immobili</text>
+
+ <!-- authorizations -->
+ <text key="houses-manage">Gestione</text>
+ <text key="houses-manage-description">Gestione modulo immobili</text>
+ <text key="houses-usage">Abilitazione</text>
+ <text key="houses-usage-description">Utilizzo del modulo immobili</text>
+
+ <!-- cHousesHouse -->
+ <text key="cHousesHouse">Immobile</text>
+ <text key="cHousesHouse-alert-error">Si è verificato un errore durante il salvataggio dell'immobile</text>
+ <text key="cHousesHouse-alert-exists">L'immobile non è stato trovato</text>
+ <text key="cHousesHouse-alert-stored">L'immobile è stato salvato</text>
+ <text key="cHousesHouse-alert-deleted">L'immobile è stato eliminato</text>
+ <text key="cHousesHouse-alert-undeleted">L'immobile è stato ripristinato</text>
+ <text key="cHousesHouse-alert-removed">L'immobile è stato rimosso</text>
+       <text key="cHousesHouse-alert-user_added">L'utente è stato aggiunto all'immobile</text>
+       <text key="cHousesHouse-alert-user_removed">L'utente è stato rimosso dall'immobile</text>
+ <text key="cHousesHouse-confirm-delete">Confermi di voler eliminare questo immobile?</text>
+ <text key="cHousesHouse-confirm-undelete">Confermi di voler ripristinare questo immobile?</text>
+ <text key="cHousesHouse-confirm-remove">Confermi di voler rimuovere irrecuperabilmente questo immobile dal database?</text>
+ <text key="cHousesHouse-confirm-user_remove">Confermi di voler rimuovere questo utente dall'immobile?</text>
+ <text key="cHousesHouse-warning-deleted">Attenzione, questo immobile risulta eliminato!</text>
+ <text key="cHousesHouse-event-created">Creazione</text>
+ <text key="cHousesHouse-event-updated">Aggiornamento</text>
+ <text key="cHousesHouse-event-deleted">Eliminazione</text>
+ <text key="cHousesHouse-event-undeleted">Ripristino</text>
+ <text key="cHousesHouse-event-removed">Rimozione</text>
+       <text key="cHousesHouse-event-user_added">Utente aggiunto</text>
+       <text key="cHousesHouse-event-user_removed">Utente rimosso</text>
+ <text key="cHousesHouse-property-name">Immobile</text>
+ <text key="cHousesHouse-property-description">Descrizione</text>
+ <text key="cHousesHouse-property-street">Indirizzo</text>
+ <text key="cHousesHouse-property-number">Civico</text>
+ <text key="cHousesHouse-property-internal">Interno</text>
+ <text key="cHousesHouse-property-zip">CAP</text>
+ <text key="cHousesHouse-property-town">Città</text>
+ <text key="cHousesHouse-property-district">Provincia</text>
+ <text key="cHousesHouse-property-country">Paese</text>
+ <text key="cHousesHouse-placeholder-name">Nome dell'immobile</text>
+ <text key="cHousesHouse-placeholder-description">Eventuale descrizione dell'immobile</text>
+ <text key="cHousesHouse-placeholder-street">Nome della strada, via, frazione, ecc..</text>
+ <text key="cHousesHouse-placeholder-number">Numero civico</text>
+ <text key="cHousesHouse-placeholder-internal">Numero di interno</text>
+ <text key="cHousesHouse-placeholder-zip">Codice di avviamento postale</text>
+ <text key="cHousesHouse-placeholder-town">Nome della città o del comune</text>
+ <text key="cHousesHouse-placeholder-district">Nome della provincia</text>
+ <text key="cHousesHouse-placeholder-country">Nome del paese o dello stato</text>
+
+ <!-- cHousesHouseRoom -->
+ <text key="cHousesHouseRoom">Stanza</text>
+ <text key="cHousesHouseRoom-alert-error">Si è verificato un errore durante il salvataggio dell'autorizzazione</text>
+ <text key="cHousesHouseRoom-alert-exists">L'autorizzazione non è stata trovata</text>
+ <text key="cHousesHouseRoom-alert-stored">L'autorizzazione è stata salvata</text>
+ <text key="cHousesHouseRoom-alert-deleted">L'autorizzazione è stata eliminata</text>
+ <text key="cHousesHouseRoom-alert-undeleted">L'autorizzazione è stata ripristinata</text>
+ <text key="cHousesHouseRoom-alert-removed">L'autorizzazione è stata rimossa</text>
+ <text key="cHousesHouseRoom-confirm-delete">Confermi di voler eliminare questa stanza?</text>
+ <text key="cHousesHouseRoom-confirm-undelete">Confermi di voler ripristinare questa stanza?</text>
+ <text key="cHousesHouseRoom-confirm-remove">Confermi di voler rimuovere irrecuperabilmente questa stanza dal database?</text>
+ <text key="cHousesHouseRoom-property-fkHouse">Immobile</text>
+ <text key="cHousesHouseRoom-property-name">Stanza</text>
+ <text key="cHousesHouseRoom-property-description">Descrizione</text>
+ <text key="cHousesHouseRoom-placeholder-name">Nome della stanza</text>
+ <text key="cHousesHouseRoom-placeholder-description">Eventuale descrizione della stanza</text>
+
+ <!-- cHousesHouseCounter -->
+ <text key="cHousesHouseCounter">Contatore</text>
+ <text key="cHousesHouseCounter-alert-error">Si è verificato un errore durante il salvataggio del contatore dell'immobile</text>
+ <text key="cHousesHouseCounter-alert-exists">Il contatore dell'immobile non è stato trovato</text>
+ <text key="cHousesHouseCounter-alert-stored">Il contatore dell'immobile è stato salvato</text>
+ <text key="cHousesHouseCounter-alert-deleted">Il contatore dell'immobile è stato eliminato</text>
+ <text key="cHousesHouseCounter-alert-undeleted">Il contatore dell'immobile è stato ripristinato</text>
+ <text key="cHousesHouseCounter-alert-removed">Il contatore dell'immobile è stato rimosso</text>
+ <text key="cHousesHouseCounter-confirm-delete">Confermi di voler eliminare questo contatore dell'immobile?</text>
+ <text key="cHousesHouseCounter-confirm-undelete">Confermi di voler ripristinare questo contatore dell'immobile?</text>
+ <text key="cHousesHouseCounter-confirm-remove">Confermi di voler rimuovere irrecuperabilmente questo contatore dell'immobile dal database?</text>
+ <text key="cHousesHouseCounter-property-fkHouse">Immobile</text>
+ <text key="cHousesHouseCounter-property-fkCounter">Contatore</text>
+ <text key="cHousesHouseCounter-property-competence">Competenza</text>
+ <text key="cHousesHouseCounter-placeholder-fkCounter">Seleziona un contatore..</text>
+ <text key="cHousesHouseCounter-placeholder-competence">Percentuale di competenza sul contatore dell'immobile</text>
+
+ <!-- navigation -->
+ <text key="nav-houses-list">Immobili</text>
+ <text key="nav-houses-add">Aggiungi immobile</text>
+ <text key="nav-houses-operations-edit">Modifica immobile</text>
+ <text key="nav-houses-operations-room_add">Aggiungi stanza</text>
+ <text key="nav-houses-operations-counter_add">Aggiungi contatore</text>
+ <text key="nav-houses-operations-user_add">Aggiungi utente</text>
+
+ <!-- houses_list -->
+ <text key="houses_list">Immobili</text>
+ <text key="houses_list-tr-unvalued">Non sono presenti immobili da mostrare..</text>
+ <text key="houses_list-th-name">Immobile</text>
+ <text key="houses_list-th-address">Indirizzo</text>
+
+ <!-- houses_view -->
+ <text key="houses_view">Immobile: <![CDATA[{0}]]></text>
+ <text key="houses_view-tab-informations">Informazioni</text>
+ <text key="houses_view-tab-rooms">Stanze</text>
+ <text key="houses_view-tab-counters">Contatori</text>
+ <text key="houses_view-tab-users">Utenti</text>
+ <text key="houses_view-tab-logs">Eventi</text>
+ <text key="houses_view-informations-dt-address">Indirizzo</text>
+ <text key="houses_view-rooms-tr-unvalued">Non sono presenti stanze da mostrare..</text>
+ <text key="houses_view-rooms-modal-title-view">Stanza dell'immobile <![CDATA[{0}]]></text>
+ <text key="houses_view-rooms-modal-title-add">Aggiungi stanza all'immobile <![CDATA[{0}]]></text>
+ <text key="houses_view-rooms-modal-title-edit">Modifica stanza dell'immobile <![CDATA[{0}]]></text>
+ <text key="houses_view-counters-tr-unvalued">Non sono presenti contatori da mostrare..</text>
+ <text key="houses_view-counters-th-last_period">Ultima misurazione</text>
+ <text key="houses_view-counters-th-last_current">Attuale</text>
+ <text key="houses_view-counters-th-last_previous">Precedente</text>
+ <text key="houses_view-counters-th-last_value">Valore</text>
+ <text key="houses_view-counters-th-last_competence">Valore di competenza</text>
+ <text key="houses_view-counters-measurements-tr-unvalued">Non sono presenti misurazioni da mostrare..</text>
+ <text key="houses_view-counters-measurements-th-period">Periodo</text>
+ <text key="houses_view-counters-measurements-th-current">Attuale</text>
+ <text key="houses_view-counters-measurements-th-previous">Precedente</text>
+ <text key="houses_view-counters-measurements-th-value">Valore</text>
+ <text key="houses_view-counters-measurements-th-competence">Competenza</text>
+ <text key="houses_view-counters-modal-title-view">Contatore dell'immobile <![CDATA[{0}]]></text>
+ <text key="houses_view-counters-modal-title-add">Aggiungi contatore all'immobile <![CDATA[{0}]]></text>
+ <text key="houses_view-counters-modal-title-edit">Modifica contatore dell'immobile <![CDATA[{0}]]></text>
+ <text key="houses_view-users-tr-unvalued">Non sono presenti utenti da mostrare..</text>
+ <text key="houses_view-users-th-user">Utente</text>
+ <text key="houses_view-users-modal-title-view">Utente dell'immobile <![CDATA[{0}]]></text>
+ <text key="houses_view-users-modal-title-add">Aggiungi utente all'immobile <![CDATA[{0}]]></text>
+
+ <!-- houses_edit -->
+ <text key="houses_edit">Modifica immobile: <![CDATA[{0}]]></text>
+ <text key="houses_edit-add">Aggiungi immobile</text>
+
+</locale>
