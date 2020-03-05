@@ -33,13 +33,6 @@
  <text key="cHousesHouse-confirm-remove">Confermi di voler rimuovere irrecuperabilmente questo immobile dal database?</text>
  <text key="cHousesHouse-confirm-user_remove">Confermi di voler rimuovere questo utente dall'immobile?</text>
  <text key="cHousesHouse-warning-deleted">Attenzione, questo immobile risulta eliminato!</text>
- <text key="cHousesHouse-event-created">Creazione</text>
- <text key="cHousesHouse-event-updated">Aggiornamento</text>
- <text key="cHousesHouse-event-deleted">Eliminazione</text>
- <text key="cHousesHouse-event-undeleted">Ripristino</text>
- <text key="cHousesHouse-event-removed">Rimozione</text>
-       <text key="cHousesHouse-event-user_added">Utente aggiunto</text>
-       <text key="cHousesHouse-event-user_removed">Utente rimosso</text>
  <text key="cHousesHouse-property-name">Immobile</text>
  <text key="cHousesHouse-property-description">Descrizione</text>
  <text key="cHousesHouse-property-street">Indirizzo</text>
