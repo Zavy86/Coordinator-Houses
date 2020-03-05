@@ -30,6 +30,22 @@
   protected $country;
 
   /**
+   * Check
+   */
+  protected function check(){
+   // check properties
+   if(!strlen(trim($this->name))){throw new Exception("House name is mandatory..");}
+   if(!strlen(trim($this->street))){throw new Exception("House street is mandatory..");}
+   if(!strlen(trim($this->number))){throw new Exception("House number is mandatory..");}
+   if(!strlen(trim($this->zip))){throw new Exception("House zip is mandatory..");}
+   if(!strlen(trim($this->town))){throw new Exception("House town is mandatory..");}
+   if(!strlen(trim($this->district))){throw new Exception("House district is mandatory..");}
+   if(!strlen(trim($this->country))){throw new Exception("House country is mandatory..");}
+   // return
+   return true;
+  }
+
+  /**
    * Decode log properties
    *
    * {@inheritdoc}
@@ -44,12 +60,8 @@
     $return_array[]=api_text($properties['_obj'])." ".$properties['_name'];
     if($properties['competence']){$return_array[]=api_text("cHousesHouseCounter-property-competence").": ".$properties['competence']['previous']."% &rarr; ".$properties['competence']['current']."%";}
    }
-
    // users events
-   if($properties['class']=="cUser"){$return_array[]=(new cUser($properties['id']))->fullname;}
-
-   /** @todo valutare se usare sempre class o _obj e correggere di conseguenza */
-
+   if($properties['_obj']=="cUser"){$return_array[]=api_text("cUser")." ".(new cUser($properties['_id']))->fullname;}
    // return
    return implode(" | ",$return_array);
   }
@@ -114,22 +126,6 @@
   public function getCounters(){return cHousesHouseCounter::availables("`fkHouse`='".$this->id."'");}
 
   /**
-   * Check
-   */
-  protected function check(){
-   // check properties
-   if(!strlen(trim($this->name))){throw new Exception("House name is mandatory..");}
-   if(!strlen(trim($this->street))){throw new Exception("House street is mandatory..");}
-   if(!strlen(trim($this->number))){throw new Exception("House number is mandatory..");}
-   if(!strlen(trim($this->zip))){throw new Exception("House zip is mandatory..");}
-   if(!strlen(trim($this->town))){throw new Exception("House town is mandatory..");}
-   if(!strlen(trim($this->district))){throw new Exception("House district is mandatory..");}
-   if(!strlen(trim($this->country))){throw new Exception("House country is mandatory..");}
-   // return
-   return true;
-  }
-
-  /**
    * Edit form
    *
    * @param string[] $additional_parameters Array of url additional parameters
@@ -178,14 +174,14 @@
    *
    * @return boolean
    */
-  public function user_add($object){return $this->joined_add("houses__houses__join__users","fkHouse","cUser","fkUser",$object,"user_added");}
+  public function user_add($object){return $this->joined_add("houses__houses__join__users","fkHouse","cUser","fkUser",$object);}
 
   /**
    * User Remove
    *
    * @return boolean
    */
-  public function user_remove($object){return $this->joined_remove("houses__houses__join__users","fkHouse","cUser","fkUser",$object,"user_removed");}
+  public function user_remove($object){return $this->joined_remove("houses__houses__join__users","fkHouse","cUser","fkUser",$object);}
 
   /**
    * Disable remove function

@@ -24,6 +24,21 @@
   protected $competence;
 
   /**
+   * Check
+   *
+   * @return boolean
+   * @throws Exception
+   */
+  protected function check(){
+   // check properties
+   if(!strlen(trim($this->fkHouse))){throw new Exception("Counter house key is mandatory..");}
+   if(!strlen(trim($this->fkCounter))){throw new Exception("Counter counter key is mandatory..");}
+   if(!strlen(trim($this->competence))){throw new Exception("Counter competence value is mandatory..");}
+   // return
+   return true;
+  }
+
+  /**
    * Process Competence
    *
    * @param double $value Counter measurement value
@@ -67,21 +82,6 @@
    $measurement->competence=$this->prcCompetence($measurement->value);
    // return
    return $measurement;
-  }
-
-  /**
-   * Check
-   *
-   * @return boolean
-   * @throws Exception
-   */
-  protected function check(){
-   // check properties
-   if(!strlen(trim($this->fkHouse))){throw new Exception("Counter house key is mandatory..");}
-   if(!strlen(trim($this->fkCounter))){throw new Exception("Counter counter key is mandatory..");}
-   if(!strlen(trim($this->competence))){throw new Exception("Counter competence value is mandatory..");}
-   // return
-   return true;
   }
 
   /**

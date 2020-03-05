@@ -24,13 +24,6 @@
   protected $description;
 
   /**
-   * Get House
-   *
-   * @return object
-   */
-  public function getHouse(){return new cHousesHouse($this->fkHouse);}
-
-  /**
    * Check
    *
    * @return boolean
@@ -43,6 +36,13 @@
    // return
    return true;
   }
+
+  /**
+   * Get House
+   *
+   * @return object
+   */
+  public function getHouse(){return new cHousesHouse($this->fkHouse);}
 
   /**
    * Edit form
