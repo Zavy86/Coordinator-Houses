@@ -61,7 +61,7 @@
     if($properties['competence']){$return_array[]=api_text("cHousesHouseCounter-property-competence").": ".$properties['competence']['previous']."% &rarr; ".$properties['competence']['current']."%";}
    }
    // users events
-   if($properties['_obj']=="cUser"){$return_array[]=api_text("cUser")." ".(new cUser($properties['_id']))->fullname;}
+   if($properties['_obj']=="cUser"){$return_array[]=api_text($properties['_obj'])." ".(new cUser($properties['_id']))->fullname;}
    // return
    return implode(" | ",$return_array);
   }

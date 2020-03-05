@@ -26,8 +26,8 @@
  <text key="cHousesHouse-alert-deleted">L'immobile è stato eliminato</text>
  <text key="cHousesHouse-alert-undeleted">L'immobile è stato ripristinato</text>
  <text key="cHousesHouse-alert-removed">L'immobile è stato rimosso</text>
-       <text key="cHousesHouse-alert-user_added">L'utente è stato aggiunto all'immobile</text>
-       <text key="cHousesHouse-alert-user_removed">L'utente è stato rimosso dall'immobile</text>
+ <text key="cHousesHouse-alert-user_added">L'utente è stato aggiunto all'immobile</text>
+ <text key="cHousesHouse-alert-user_removed">L'utente è stato rimosso dall'immobile</text>
  <text key="cHousesHouse-confirm-delete">Confermi di voler eliminare questo immobile?</text>
  <text key="cHousesHouse-confirm-undelete">Confermi di voler ripristinare questo immobile?</text>
  <text key="cHousesHouse-confirm-remove">Confermi di voler rimuovere irrecuperabilmente questo immobile dal database?</text>
